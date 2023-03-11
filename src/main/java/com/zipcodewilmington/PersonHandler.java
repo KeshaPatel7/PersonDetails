@@ -14,7 +14,17 @@ public class PersonHandler {
     // simple lines of code...
     
     public String whileLoop() {
-        String result = "";
+
+        String everyone = "";
+        int i = 0;
+        while (i < personArray.length) {
+            everyone += personArray[i];
+            i++;
+
+        }
+        return everyone;
+    }
+
         // create a `counter`
         // while `counter` is less than length of array
             // begin loop
@@ -24,8 +34,8 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
 
             // end loop
-        return result;
-    }
+
+
 
 
 
@@ -42,24 +52,34 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
             // end loop
 
+        for(int i = 0; i < personArray.length; i++){
+            result += personArray[i];
+        }
+
         return result;
     }
 
 
 
     public String forEachLoop() {
-        String result = "";
+        //String result = "";
         // identify array's type
         // identify array's variable-name
 
         // use the above discoveries to declare for-each-loop signature
-            // begin loop
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-            // end loop
+        // begin loop
+        // get `string Representation` of `currentPerson`
+      // append `stringRepresentation` to `result` variable
+      // end loop
+        StringBuilder result = new StringBuilder();
+        for(Person currentPerson : personArray) {
+            result.append(currentPerson.toString());
 
-        return result;
-    }
+        }
+        return result.toString();
+
+        }
+
 
 
     public Person[] getPersonArray() {
